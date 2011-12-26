@@ -12,12 +12,12 @@ body {
   z-index:                  1;
 }
 
-#flip-card {
+.flip-card {
   width:                    100%;
   height:                   100%;
 }
 
-#flip-card.flipper {
+.flip-card.flipper {
   margin-top:               20px;
   -webkit-transition:       -webkit-transform 1s;
   -webkit-transform-style:  preserve-3d; /*indicates the children of the element should be positioned in 3D space   */
@@ -34,7 +34,6 @@ body {
   font-size:              12pt;
   text-align:             center;
   background-color:       rgba(128, 128, 0, .5);
-/*      -webkit-border-radius:  10px;*/
   -webkit-backface-visibility: hidden;
 }
 
@@ -47,10 +46,15 @@ body {
 
 /* 
     This is where the magic happens 
-    This combined w/ the -webkit-transition on the #flip-card flip
+    This combined w/ the -webkit-transition on the .flip-card flip
     things
 */
-#flip-container #flip-card.flipper:hover {
+#flip-container .flip-card.flipper.flip {
   -webkit-transform:    rotateX(180deg);
+}
+
+.next .face {
+	top: 									281px;
+	background-color: 		rgba(0, 0, 255, .4);
 }
 
