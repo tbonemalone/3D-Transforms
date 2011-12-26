@@ -9,11 +9,15 @@
       font-family: Helvetica;
     }
     
+    #flip-card.stationary {
+      webkit-transition: none;
+    }
+    
     #flip-container {
       -webkit-perspective:      1000;
 
       position:                 relative;
-      margin:                   10px auto;
+      margin:                   25px auto;
       width:                    250px;
       height:                   261px;
       z-index:                  1;
@@ -23,6 +27,7 @@
       width:                    100%;
       height:                   100%;
       -webkit-transform-style:  preserve-3d; /*indicates the children of the element should be positioned in 3D space   */
+      -webkit-transform-origin: 50% 0%;
       -webkit-transition:       -webkit-transform 1s;
     }
 
@@ -43,8 +48,7 @@
     /* Styles that only apply to the backside*/
     .face.back {
       display:                block;
-      -webkit-transform:      rotateY(180deg);
-      -webkit-box-sizing:     border-box;
+      -webkit-transform:      rotateX(180deg);
       background-color:       #835a99;
     }
     
@@ -54,7 +58,7 @@
         things
     */
     #flip-container #flip-card:hover {
-      -webkit-transform:    rotateY(180deg);
+      -webkit-transform:    rotateX(180deg);
     }
     
   </style>
@@ -64,7 +68,7 @@
     <!-- This just holds the card -->
     <div id="flip-container">
       <!--the actual card that will be flipping -->
-      <div id="flip-card">
+      <div id="flip-card" class="stationary">
         <!-- the front of the card -->
         <div class="front face">
           <p>Here are some words on the front</p>
@@ -75,6 +79,21 @@
         </div>
       </div>
     </div>
+    
+    <div id="flip-container">
+      <!--the actual card that will be flipping -->
+      <div id="flip-card">
+        <!-- the front of the card -->
+        <div class="front face">
+          <p>Here are some words on the second front</p>
+        </div>
+        <!-- the back of the card -->
+        <div class="back face">
+          <p>Here are some words on the second back</p>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </body>
 </html>
