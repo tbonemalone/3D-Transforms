@@ -30,7 +30,7 @@
       -webkit-transform-style:  preserve-3d; /*indicates the children of the element should be positioned in 3D space   */
       -webkit-transform-origin: 50% 0%;
     }
-
+    
     /* Styles common to the front and the back*/
     .face {
       position:               absolute;
@@ -57,7 +57,7 @@
         This combined w/ the -webkit-transition on the #flip-card flip
         things
     */
-    #flip-container #flip-card:hover {
+    #flip-container #flip-card.flipper:hover {
       -webkit-transform:    rotateX(180deg);
     }
     
@@ -74,9 +74,6 @@
           <p>Here are some words on the front</p>
         </div>
         <!-- the back of the card -->
-        <div class="back face">
-          <p>Here are some words on the back</p>
-        </div>
       </div>
 
       <!--the actual card that will be flipping -->
