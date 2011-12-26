@@ -26,33 +26,36 @@
       -webkit-transition:       -webkit-transform 1s;
     }
 
+    /* Styles common to the front and the back*/
     .face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+      position:               absolute;
+      width:                  100%;
+      height:                 100%;
+      color:                  rgba(255,255,255,1);
+      padding:                10px;
+      font-size:              12pt;
+      text-align:             center;
+      background-color:       red;
+      -webkit-border-radius:  10px;
       -webkit-backface-visibility: hidden;
-      text-align: center;
     }
-
+    
+    /* Styles that only apply to the backside*/
     .face.back {
-      display: block;
-      -webkit-transform: rotateY(180deg);
-      -webkit-box-sizing: border-box;
-      padding: 10px;
-      font-size: 12pt;
-      color:  rgba(255,255,255,1);
-      background-color:#835a99;
-      -webkit-border-radius: 10px;
+      display:                block;
+      -webkit-transform:      rotateY(180deg);
+      -webkit-box-sizing:     border-box;
+      background-color:       #835a99;
     }
     
-    /* This is where the magic happens */
+    /* 
+        This is where the magic happens 
+        This combined w/ the -webkit-transition on the #flip-card flip
+        things
+    */
     #flip-container #flip-card:hover {
-      -webkit-transform: rotateY(180deg);
+      -webkit-transform:    rotateY(180deg);
     }
-    
-
-    
-    
     
   </style>
 </head>
