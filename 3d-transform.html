@@ -3,65 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Playing Around With CSS Transforms</title>
-  <style>
-  
-    body {
-      font-family: Helvetica;
-    }
-    
-    #flip-container {
-      -webkit-perspective:      1000;
-
-      position:                 relative;
-      margin:                   25px auto;
-      width:                    250px;
-      height:                   261px;
-      z-index:                  1;
-    }
-
-    #flip-card {
-      width:                    100%;
-      height:                   100%;
-    }
-    
-    #flip-card.flipper {
-      margin-top:               20px;
-      -webkit-transition:       -webkit-transform 1s;
-      -webkit-transform-style:  preserve-3d; /*indicates the children of the element should be positioned in 3D space   */
-      -webkit-transform-origin: 50% 0%;
-    }
-    
-    /* Styles common to the front and the back*/
-    .face {
-      position:               absolute;
-      width:                  100%;
-      height:                 100%;
-      color:                  rgba(255,255,255,1);
-      padding:                10px;
-      font-size:              12pt;
-      text-align:             center;
-      background-color:       rgba(128, 128, 0, .5);
-/*      -webkit-border-radius:  10px;*/
-      -webkit-backface-visibility: hidden;
-    }
-    
-    /* Styles that only apply to the backside*/
-    .face.back {
-      display:                block;
-      -webkit-transform:      rotateX(180deg);
-      background-color:       #835a99;
-    }
-    
-    /* 
-        This is where the magic happens 
-        This combined w/ the -webkit-transition on the #flip-card flip
-        things
-    */
-    #flip-container #flip-card.flipper:hover {
-      -webkit-transform:    rotateX(180deg);
-    }
-    
-  </style>
+  <link rel="stylesheet" href="3d-transform.css">
 </head>
 <body>
   <div class="container">
