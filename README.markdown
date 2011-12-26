@@ -13,3 +13,5 @@
 
 - -webkit-transform-style: preserve-3d or flat; determines if the children of the element are positioned in the 3D-space or are flattened in the plane of the element.
 - To actualy flip the card -webkit-transition the rotateY() property on hover over the #flip-card
+
+### So this project has evolved and will continue. Will update this file farther down the road.
